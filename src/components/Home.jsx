@@ -1,24 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import CryptoItem from "./CryptoItem";
 import Loader from "./Loader";
+import { fetchCryptoDetails } from "../apiCrypto";
 
 function Home() {
-  async function fetchCryptoDetails() {
-    const response = await axios.get(
-      "https://min-api.cryptocompare.com/data/top/totalvolfull",
-      {
-        params: {
-          limit: 100,
-          tsym: "INR",
-        },
-      }
-    );
-    return response.data.Data;
-  }
-
   const { data, error, isLoading } = useQuery({
-    queryKey: "cryptoList",
+    queryKey: ["cryptoList"],
     queryFn: fetchCryptoDetails,
   });
 
