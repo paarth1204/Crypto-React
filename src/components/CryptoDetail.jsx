@@ -12,11 +12,10 @@ import {
   YAxis,
 } from "recharts";
 import { fetchPriceData } from "../apiCrypto";
-import CoinDetails from "./CoinDetails";
 
 function CryptoDetail() {
   const { crypto } = useParams();
-  console.log(crypto);
+
   const { data, error, isLoading } = useQuery({
     queryKey: ["cryptoDetail", crypto],
     queryFn: () => fetchPriceData({ crypto }),
@@ -36,30 +35,28 @@ function CryptoDetail() {
   }));
 
   return (
-    <div className="bg-sky-950 h-screen flex">
-      <div className="border-r flex border-purple-800 m-auto">
-        <CoinDetails symbol={crypto} />
-      </div>
-      <>
-        <h1 className="items-center m-auto flex md:flex-col ml-[100px]">
-          Crypto Price Chart
-        </h1>
-        <ResponsiveContainer width="65%" height="65%">
-          <LineChart
-            width={600}
-            height={400}
-            data={chartData}
-            className="items-center m-auto flex md:flex-col ml-[100px] bg-gray-950"
-          >
-            <XAxis dataKey="date" stroke="rgb(231, 217, 16)" />
-            <YAxis stroke="rgb(231, 217, 16)" />
-            <Tooltip />
-            <Line type="monotone" dataKey="price" stroke="rgb(75, 192, 192)" />
-          </LineChart>
-        </ResponsiveContainer>
-      </>
+    <div className="bg-sky-950 h-screen flex flex-col">
+      <h1 className="flex items-center justify-center text-3xl font-bold text-blue-50 mt-5">
+        Crypto Price Chart
+      </h1>
+
+      <ResponsiveContainer width="65%" height="65%">
+        <LineChart
+          width={600}
+          height={400}
+          data={chartData}
+          className=" flex m-auto right-[0] bottom-[0] left-[0] mt-20 px-8 py-8 items-center justify-center ml-20 bg-gray-950"
+        >
+          <XAxis dataKey="date" stroke="rgb(231, 217, 16)" />
+          <YAxis stroke="rgb(231, 217, 16)" />
+          <Tooltip />
+          <Line type="monotone" dataKey="price" stroke="rgb(75, 192, 192)" />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
+
+  // return null;
 }
 
 export default CryptoDetail;

@@ -13,7 +13,13 @@
   justify-content: center;
   margin: auto;
 }
-
+.crypto-chart {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 .loader {
   width: 45px;
   aspect-ratio: 0.75;

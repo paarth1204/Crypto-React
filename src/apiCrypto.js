@@ -11,18 +11,6 @@ export async function fetchCryptoDetails() {
   });
   return response.data.Data;
 }
-export async function fetchCoinDetails(symbol) {
-  console.log(symbol, "api");
-  const response = await axios.get(
-    `https://data-api.cryptocompare.com/asset/v1/data/by/symbol`,
-    {
-      params: {
-        asset_symbol: symbol,
-      },
-    }
-  );
-  return response.data.Data;
-}
 
 export const fetchPriceData = async ({ crypto }) => {
   try {
