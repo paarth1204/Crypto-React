@@ -45,7 +45,7 @@ function CryptoDetail() {
           width={600}
           height={400}
           data={chartData}
-          className=" flex m-auto right-[0] bottom-[0] left-[0] mt-20 px-8 py-8 items-center justify-center ml-20 bg-gray-950"
+          className=" flex m-auto right-[0] bottom-[0] left-[0] mt-20 px-4 items-center justify-center ml-20 bg-gray-950"
         >
           <XAxis dataKey="date" stroke="rgb(231, 217, 16)" />
           <YAxis stroke="rgb(231, 217, 16)" />
