@@ -1,21 +1,20 @@
+import { AppBar, Container, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="flex items-center justify-between border-b border-stone-600 crypto-header px-7 py-6 uppercase sm:px-6 ">
-      <Link
-        to="/"
-        className="tracking-widest text-stone-300 text-lg font-semibold"
-      >
-        Coins React
-      </Link>
-
-      {/* <input
-        type="text"
-        placeholder="Enter Coin"
-        className="px-4 py-3 rounded-full transition-all duration-300 bg-stone-200 focus:border-sky-100 sm:w-64 sm:focus:w-72"
-      /> */}
-    </header>
+    <AppBar position="static" sx={{ bgcolor: " rgb(125, 158, 5)" }}>
+      <Container>
+        <Toolbar variant="dense">
+          {/* <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+      <MenuIcon />
+    </IconButton> */}
+          <Typography variant="h5" color="rgb(206, 214, 179);">
+            <Link to="/">Coins React</Link>
+          </Typography>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
 

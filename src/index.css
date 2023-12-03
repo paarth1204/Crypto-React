@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.crypto-header {
-  background-color: #161d2b;
-  /* background-color: rgb(231, 217, 16); */
+.crypto-main {
+  background-color: rgb(227, 250, 144);
+  height: screen;
 }
 
 .crypto-item {
-  background-color: #1e2433;
+  background-color: rgb(173, 211, 47);
+  color: rgb(21, 27, 1);
   align-items: center;
   justify-content: center;
   margin: auto;
+}
+
+.crypto-item:hover {
+  background-color: rgb(63, 78, 7);
+  color: rgb(227, 250, 144);
 }
 .crypto-chart {
   margin: auto;
@@ -20,6 +26,14 @@
   bottom: 0;
   right: 0;
 }
+
+.custom-tooltip {
+  background-color: rgb(227, 250, 144);
+  border: 1px solid #cccccc;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .loader {
   width: 45px;
   aspect-ratio: 0.75;
