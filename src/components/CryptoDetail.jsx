@@ -56,10 +56,8 @@ function CryptoDetail() {
     return null;
   }
 
-  // Function to format Y-axis ticks
-  const formatYAxisTick = (tickValue) => {
-    // Use Numeral.js to format the tick value with the currency symbol
-    return numeral(tickValue).format(`${symbol}0,0.00`);
+  const formatCurrencyAxis = (value) => {
+    return numeral(value).format(`${symbol}0,0.00`);
   };
 
   return (
@@ -83,7 +81,7 @@ function CryptoDetail() {
           />
           <YAxis
             stroke="rgb(231, 217, 16)"
-            tickFormatter={formatYAxisTick}
+            tickFormatter={formatCurrencyAxis}
             angle={-40}
             textAnchor="end"
             // tick={{ fontSize: 10 }}
