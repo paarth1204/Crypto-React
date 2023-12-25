@@ -9,7 +9,7 @@ function CryptoProvider({ children }) {
 
   useEffect(
     function () {
-      if (currency === "INR") setSymbol("₹");
+      if (currency === "JPY") setSymbol("¥");
       else if (currency === "USD") setSymbol("$");
       else if (currency === "EUR") setSymbol("€");
     },

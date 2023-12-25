@@ -10,9 +10,9 @@ function CryptoItem({ crypto }) {
   let change;
 
   if (crypto.RAW) {
-    if (currency === "INR") {
-      price = crypto.DISPLAY.INR.PRICE;
-      change = crypto.DISPLAY.INR.CHANGEPCT24HOUR;
+    if (currency === "JPY") {
+      price = crypto.DISPLAY.JPY.PRICE;
+      change = crypto.DISPLAY.JPY.CHANGEPCT24HOUR;
     } else if (currency === "USD") {
       price = crypto.DISPLAY.USD.PRICE;
       change = crypto.DISPLAY.USD.CHANGEPCT24HOUR;

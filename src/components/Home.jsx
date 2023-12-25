@@ -37,7 +37,7 @@ function Home() {
           refetch({ queryKey: ["cryptoList", newCurrency] });
         }}
       >
-        <MenuItem value={"INR"}>INR</MenuItem>
+        <MenuItem value={"JPY"}>JPY</MenuItem>
         <MenuItem value={"USD"}>USD</MenuItem>
         <MenuItem value={"EUR"}>EUR</MenuItem>
       </Select>
